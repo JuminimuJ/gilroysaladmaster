@@ -58,7 +58,7 @@ if(isset($_SESSION["username"] ))
                             	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-blog"></i> Blog</h6>
 
-                                    <button class="btn btn-outline-dark"><i class="fas fa-plus"></i> Add New Tab</button>
+                                    <button class="btn btn-outline-dark rounded-0"><i class="fas fa-plus"></i> Add New Tab</button>
                                 </div>
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">

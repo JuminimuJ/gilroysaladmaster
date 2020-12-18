@@ -164,6 +164,7 @@ More About Us
 <h3>
 <a href="#">Ilocano Pinakbet</a>
 </h3>
+<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
 </div>
 </div>
 </div>
