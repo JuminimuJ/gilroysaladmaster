@@ -86,7 +86,7 @@ Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum
                                                         <td></td>
                                                         
                                                         <td><div class="dropdown">
-                                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <button class="btn btn-outline-dark rounded-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Action
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -106,7 +106,7 @@ Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reicie
 <td></td>
                                                         <td></td>
                                                         <td><div class="dropdown">
-                                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <button class="btn btn-outline-dark rounded-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Action
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
