@@ -96,7 +96,7 @@ Mon-Sat: <span> 11:00 AM - 23:00 PM</span>
 <div class="col-lg-4 col-md-3">
 <ul class="social-list">
 <li>
-<a href="#">
+<a href="https://www.facebook.com/CA-Systems-of-Gilroy-Saladmaster-103940207860668" target="_blank">
 <i class="fa fa-facebook"></i>
 </a>
 </li>
@@ -116,7 +116,7 @@ Mon-Sat: <span> 11:00 AM - 23:00 PM</span>
 </a>
 </li>
 <li>
-<a href="#">
+<a href="https://www.youtube.com/channel/UC2nus9lm-pOaSXPPetTaVXw" target="_blank">
 <i class="fa fa-youtube-play"></i>
 </a>
 </li>
