@@ -1,41 +1,15 @@
 <!doctype html>
 <html lang="zxx">
-
-<!-- Mirrored from templates.envytheme.com/asahi/default/blog-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 12:36:08 GMT -->
 <head>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<?php 
+include('render/css.php');
+?>
 
-<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-
-<link rel="stylesheet" href="assets/css/animate.css">
-
-<link rel="stylesheet" href="assets/css/flaticon.css">
-
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="assets/css/nice-select.css">
-
-<link rel="stylesheet" href="assets/css/imagelightbox.min.css">
-
-<link rel="stylesheet" href="assets/css/meanmenu.css">
-
-<link rel="stylesheet" href="assets/css/date-picker.css">
-
-<link rel="stylesheet" href="assets/css/odometer.css">
-
-<link rel="stylesheet" href="assets/css/style.css">
-
-<link rel="stylesheet" href="assets/css/responsive.css">
-
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-
-<title>Asahi - Food & Restaurant HTML Template</title>
+<title>Gilroy Saladmaster® - Blog</title>
 </head>
 <body>
 
@@ -46,224 +20,13 @@
 </div>
 </div>
 
-
-<div class="asahi-nav">
-<div class="navbar-area fixed-top">
-
-<div class="mobile-nav">
-<a href="index.html" class="logo">
-<img src="assets/img/asahi-logo.png" alt="Asahi Logo">
-</a>
-</div>
-
-<div class="main-nav">
-<nav class="navbar navbar-expand-md navbar-light">
-<div class="container">
-<a class="navbar-brand" href="index.html">
-<img src="assets/img/asahi-logo.png" alt="Asahi Logo">
-</a>
-<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle">Home</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="index.html" class="nav-link">Home One</a>
-</li>
-<li class="nav-item">
-<a href="index-2.html" class="nav-link">Home Two</a>
-</li>
-<li class="nav-item">
-<a href="index-3.html" class="nav-link">Home Three</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle">Menu</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="menu-standard.html" class="nav-link">Menu Standard</a>
-</li>
-<li class="nav-item">
-<a href="menu-classic.html" class="nav-link">Menu Classic</a>
-</li>
-<li class="nav-item">
-<a href="menu-grid.html" class="nav-link">Menu Grid</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle">Pages</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="about.html" class="nav-link">about</a>
-</li>
-<li class="nav-item">
-<a href="faq.html" class="nav-link">FAQ</a>
-</li>
-<li class="nav-item">
-<a href="book-table.html" class="nav-link">Book Table</a>
-</li>
-<li class="nav-item">
-<a href="coming-soon.html" class="nav-link">Coming Soon</a>
-</li>
-<li class="nav-item">
-<a href="404.html" class="nav-link">404 Error</a>
-</li>
-<li class="nav-item">
-<a href="log-in.html" class="nav-link">Log In</a>
-</li>
-<li class="nav-item">
-<a href="sign-up.html" class="nav-link">Sign Up</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle">Shop</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="shop.html" class="nav-link">Shop</a>
-</li>
-<li class="nav-item">
-<a href="shop-details.html" class="nav-link">Shop Details</a>
-</li>
-<li class="nav-item">
-<a href="checkout.html" class="nav-link">Checkout</a>
-</li>
-<li class="nav-item">
-<a href="cart.html" class="nav-link">Cart</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle active">Blog</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="blog-grid.html" class="nav-link">Blog Grid</a>
-</li>
-<li class="nav-item">
-<a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a>
-</li>
-<li class="nav-item">
-<a href="blog-details.html" class="nav-link active">Blog Details</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="contact.html" class="nav-link">Contact</a>
-</li>
-</ul>
-<div class="others-option">
-<a href="cart.html" class="menu-btn cart-icon">
-<i class="flaticon-shopping-cart"></i>
-</a>
-<a href="tel:+800-987-65-43" class="menu-btn contact-number">
-<i class="flaticon-phone-call"></i>
-+800-987-65-43
-</a>
-<a href="book-table.html" class="menu-btn book-table">
-Book Table
-<i class="flaticon-right-arrow-forward"></i>
-</a>
-</div>
-</div>
-</div>
-</nav>
-</div>
-</div>
-</div>
-
-
-<div class="sidebar-modal">
-<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">
-<i class="fa fa-times"></i>
-</span>
-</button>
-<h2 class="modal-title" id="myModalLabel2">
-<a href="index.html">
-<img src="assets/img/asahi-logo.png" alt="Logo">
-</a>
-</h2>
-</div>
-<div class="modal-body">
-<div class="sidebar-modal-widget">
-<h3 class="title">Contact Info</h3>
-<ul class="contact-info">
-<li>
-<i class="fa fa-map-marker"></i>
-Address
-<span>44 Canal Center Plaza #200, Alexandria, VA 22314, USA</span>
-</li>
-<li>
-<i class="fa fa-envelope"></i>
-Email
-<span><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9afbe9fbf2f3dafdf7fbf3f6b4f9f5f7">[email&#160;protected]</a></span>
-</li>
-<li>
-<i class="fa fa-phone"></i>
-Phone
-<span>+25462755, 265497466</span>
-</li>
-</ul>
-</div>
-<div class="sidebar-modal-widget">
-<h3 class="title">Additional Links</h3>
-<ul>
-<li>
-<a href="log-in.html">Log In</a>
-</li>
-<li>
-<a href="sign-up.html">Sign Up</a>
-</li>
-<li>
-<a href="faq.html">FAQ</a>
-</li>
-<li>
-<a href="#">Logout</a>
-</li>
-</ul>
-</div>
-<div class="sidebar-modal-widget">
-<h3 class="title">Connect With Us</h3>
-<ul class="social-list">
-<li>
-<a href="#">
-<i class="fa fa-facebook"></i>
-</a>
-</li>
-<li>
-<a href="#">
-<i class="fa fa-twitter"></i>
-</a>
-</li>
-<li>
-<a href="#">
-<i class="fa fa-instagram"></i>
-</a>
-</li>
-<li>
-<a href="#">
-<i class="fa fa-linkedin"></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+<?php include('render/nav.php');?>
+<?php include('render/sidebar-modal.php');?>
 
 <div class="page-title-area item-bg-1">
 <div class="container">
 <div class="page-title-content">
-<h2>Blog Details</h2>
+<h2><?php foreach ( $_GET as $key => $value ) {echo str_replace("_"," ",$key);}?></h2>
 <ul>
 <li>
 <a href="index.html">
@@ -282,9 +45,10 @@ Home
 <div class="container">
 <div class="row">
 <div class="col-lg-8 col-md-12">
+
 <div class="blog-details-desc">
 <div class="article-image">
-<img src="assets/img/blog-details/1.jpg" alt="image">
+<iframe width="720" height="492" src="https://www.youtube.com/embed/7DAFDUJnyiA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div class="article-content">
 <div class="entry-meta">
@@ -296,10 +60,7 @@ Home
 <h3>Master Chife Best Competition</h3>
 <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-<blockquote class="flaticon-quotation">
-<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-<cite>Tom Cruise</cite>
-</blockquote>
+
 <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
 <ul class="wp-block-gallery columns-3">
 <li class="blocks-gallery-item">
@@ -436,10 +197,7 @@ Required fields are marked
 <label>Email <span class="required">*</span></label>
 <input type="email" id="email" name="email" required="required">
 </p>
-<p class="comment-form-url">
-<label>Website</label>
-<input type="url" id="url" name="url">
-</p>
+
 <p class="form-submit">
 <input type="submit" name="submit" id="submit" class="submit" value="Post A Comment">
 </p>

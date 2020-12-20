@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="zxx">
-
-<!-- Mirrored from templates.envytheme.com/asahi/default/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 12:36:07 GMT -->
 <head>
 
 <meta charset="utf-8">
@@ -197,6 +195,4 @@ $(function() {
 });
 </script>
 </body>
-
-<!-- Mirrored from templates.envytheme.com/asahi/default/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 12:36:08 GMT -->
 </html>

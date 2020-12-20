@@ -153,63 +153,63 @@ More About Us
 <img src="assets/img/shape/1.png" alt="Shape">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Quis ipsum suspendisse.</p>
 </div>
+
 <div class="row">
-<div class="col-lg-3 col-sm-6 col-md-6">
-<div class="single-speacial-Offers">
-<div class="menu-img">
-<img src="uploads/home_recipethumb3.jpg" alt="Offers">
+	<div class="col-lg-3 col-sm-6 col-md-6">
+	<div class="single-speacial-Offers">
+	<div class="menu-img">
+	<img src="uploads/home_recipethumb3.jpg" alt="Offers">
+	</div>
+	<div class="item-text">
+	<h3>
+	<a href="#">Ilocano Pinakbet</a>
+	</h3>
+	<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
+	</div>
+	</div>
+	</div>
 
-</div>
-<div class="item-text">
-<h3>
-<a href="#">Ilocano Pinakbet</a>
-</h3>
-<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-md-6">
-<div class="single-speacial-Offers">
-<div class="menu-img">
-<img src="uploads/home_recipethumb1.jpg" alt="Offers">
+	<div class="col-lg-3 col-sm-6 col-md-6">
+	<div class="single-speacial-Offers">
+	<div class="menu-img">
+	<img src="uploads/home_recipethumb1.jpg" alt="Offers">
+	</div>
+	<div class="item-text">
+	<h3>
+	<a href="#">Sushi Bake</a>
+	</h3>
+	<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
+	</div>
+	</div>
+	</div>
 
-</div>
-<div class="item-text">
-<h3>
-<a href="#">Sushi Bake</a>
-</h3>
-<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-md-6">
-<div class="single-speacial-Offers">
-<div class="menu-img">
-<img src="uploads/home_recipethumb2.jpg" alt="Offers">
+	<div class="col-lg-3 col-sm-6 col-md-6">
+	<div class="single-speacial-Offers">
+	<div class="menu-img">
+	<img src="uploads/home_recipethumb2.jpg" alt="Offers">
+	</div>
+	<div class="item-text">
+	<h3>
+	<a href="#">Japchae and Bibimbap</a>
+	</h3>
+	<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
+	</div>
+	</div>
+	</div>
 
-</div>
-<div class="item-text">
-<h3>
-<a href="#">Japchae and Bibimbap</a>
-</h3>
-<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-md-6">
-<div class="single-speacial-Offers">
-<div class="menu-img">
-<img src="uploads/home_recipethumb4.jpg" alt="Offers">
-
-</div>
-<div class="item-text">
-<h3>
-<a href="#">Pork Lechon Belly</a>
-</h3>
-<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-</div>
-</div>
-</div>
+	<div class="col-lg-3 col-sm-6 col-md-6">
+	<div class="single-speacial-Offers">
+	<div class="menu-img">
+	<img src="uploads/home_recipethumb4.jpg" alt="Offers">
+	</div>
+	<div class="item-text">
+	<h3>
+	<a href="#">Pork Lechon Belly</a>
+	</h3>
+	<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
+	</div>
+	</div>
+	</div>
 </div>
 </div>
 </section>

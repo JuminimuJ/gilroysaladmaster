@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="zxx">
-
-<!-- Mirrored from templates.envytheme.com/asahi/default/shop-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 12:36:04 GMT -->
 <head>
 
 <meta charset="utf-8">
@@ -862,5 +860,4 @@ Friday: <span>9.00 AM - 22.00 PM</span>
 <script src="assets/js/custom.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/asahi/default/shop-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 12:36:05 GMT -->
 </html>

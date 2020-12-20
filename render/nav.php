@@ -75,7 +75,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="about.php" id="recipe" class="nav-link">Recipe</a>
+					<a href="recipe.php" id="recipe" class="nav-link">Recipes</a>
 				</li>
 				<li class="nav-item">
 					<a href="contact.php" id="contact" class="nav-link">Contact</a>

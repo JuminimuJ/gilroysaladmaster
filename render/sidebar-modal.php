@@ -35,7 +35,7 @@
 							</li>
 							<li>
 								<i class="fa fa-phone"></i>Email
-								<span>info@email.com</span>
+								<span>casysgilroy@gmail.com</span>
 							</li>
 							<li>
 								<i class="fa fa-envelope"></i>
