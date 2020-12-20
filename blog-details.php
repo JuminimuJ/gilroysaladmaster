@@ -1,3 +1,17 @@
+<?php
+date_default_timezone_set('Asia/Manila');
+
+include('db/conn.php');
+
+
+$blog_sql = "SELECT * FROM `page_blog` WHERE `id`='$_GET[blog_id]'";
+$blog_query = $conn->query($blog_sql);
+
+$row = $blog_query->fetch_array();
+$date_new = date($row[6]);
+$date_c = date_create($date_new);
+$date_f = date_format($date_c, 'F d, Y');                                                    
+?>
 <!doctype html>
 <html lang="zxx">
 <head>
@@ -8,7 +22,13 @@
 <?php 
 include('render/css.php');
 ?>
-
+<style type="text/css">
+	iframe
+	{
+		width:720px;
+		height:492px;
+	}
+</style>
 <title>Gilroy Saladmaster® - Blog</title>
 </head>
 <body>
@@ -26,15 +46,15 @@ include('render/css.php');
 <div class="page-title-area item-bg-1">
 <div class="container">
 <div class="page-title-content">
-<h2><?php foreach ( $_GET as $key => $value ) {echo str_replace("_"," ",$key);}?></h2>
+<h2><?php echo $row[1];?></h2>
 <ul>
 <li>
-<a href="index.html">
+<a href="index.php">
 Home
 <i class="fa fa-chevron-right"></i>
 </a>
 </li>
-<li>Blog Details</li>
+<li><?php echo $row[1];?></li>
 </ul>
 </div>
 </div>
@@ -48,18 +68,17 @@ Home
 
 <div class="blog-details-desc">
 <div class="article-image">
-<iframe width="720" height="492" src="https://www.youtube.com/embed/7DAFDUJnyiA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<?php echo $row[4];?>
 </div>
 <div class="article-content">
 <div class="entry-meta">
 <ul>
-<li><span>Posted On:</span> <a href="#">September 31, 2020</a></li>
-<li><span>Posted By:</span> <a href="#">John Anderson</a></li>
+<li><span>Posted On:</span> <a href="#"><?php echo $date_f;?></a></li>
+<li><span>Posted By:</span> <a href="#">Admin</a></li>
 </ul>
 </div>
-<h3>Master Chife Best Competition</h3>
-<p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+<h3><?php echo $row[1];?></h3>
+<p><?php echo $row[2];?></p>
 
 <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
 <ul class="wp-block-gallery columns-3">

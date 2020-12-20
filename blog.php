@@ -1,3 +1,8 @@
+<?php
+date_default_timezone_set('Asia/Manila');
+
+include('db/conn.php');
+?>
 <!doctype html>
 <html lang="zxx">
 <head>
@@ -45,96 +50,35 @@ Home
 	<div class="container">
 		<div class="row">
 
+			<?php 
+				$blog_sql = "SELECT * FROM `page_blog` WHERE 1";
+				$blog_query = $conn->query($blog_sql);
+				while($row = $blog_query->fetch_array())
+				{
+
+					$date_new = date($row[6]);
+					$date_c = date_create($date_new);
+					$date_f = date_format($date_c, 'F d, Y');
+			?>
 			<div class="col-lg-4 col-md-6">
 				<div class="single-blog single-blog-grid">
 					<a href="blog-details.html">
-						<img src="uploads/blog/thumb/Ube Cheese Pandesal with Haidee.jpg" alt="Blog">
+						<img src="uploads/blog/thumb/<?php echo $row[3];?>" alt="Blog">
 					</a>
 					<div class="blog-text">
-						<p>By <a href="#">Admin</a> / On December 15, 2020</p>
+						<p>By <a href="#">Admin</a> / On <?php echo $date_f;?></p>
 						<h3>
-							<a href="blog-details.html">Ube Cheese Pandesal with Haidee</a>
+							<a href="blog-details.php?blog_id=<?php echo $row[0];?>"><?php echo $row[1];?></a>
 						</h3>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
+						<a class="read-more" href="blog-details.php?blog_id=<?php echo $row[0];?>">Read More <i class="flaticon-right-arrow-forward"></i></a>
 					</div>
 				</div>
 			</div>
+			<?php
+				}
+			?>
 
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog single-blog-grid">
-					<a href="blog-details.html">
-						<img src="uploads/blog/thumb/French Crepes with Christine.jpg" alt="Blog">
-					</a>
-					<div class="blog-text">
-						<p>By <a href="#">Admin</a> / On December 15, 2020</p>
-						<h3>
-							<a href="blog-details.html">French Crepes with Christine</a>
-						</h3>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog single-blog-grid">
-					<a href="blog-details.html">
-						<img src="uploads/blog/thumb/French Toast & Turkey Bacon with Andrea Hayden.jpg" alt="Blog">
-					</a>
-					<div class="blog-text">
-						<p>By <a href="#">Admin</a> / On December 15, 2020</p>
-						<h3>
-							<a href="blog-details.html">French Toast & Turkey Bacon with Andrea Hayden</a>
-						</h3>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog single-blog-grid">
-					<a href="blog-details.html">
-						<img src="uploads/blog/thumb/Ilocano Pinakbet with Shirley.jpg" alt="Blog">
-					</a>
-					<div class="blog-text">
-						<p>By <a href="#">Admin</a> / On December 15, 2020</p>
-						<h3>
-							<a href="blog-details.html">Ilocano Pinakbet with Shirley</a>
-						</h3>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog single-blog-grid">
-					<a href="blog-details.html">
-						<img src="uploads/blog/thumb/Spam Musubi with Angelica.jpg" alt="Blog">
-					</a>
-					<div class="blog-text">
-						<p>By <a href="#">Admin</a> / On December 15, 2020</p>
-						<h3>
-							<a href="blog-details.html">Spam Musubi with Angelica</a>
-						</h3>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog single-blog-grid">
-					<a href="blog-details.html">
-						<img src="uploads/blog/thumb/Stuffed Bell Peppers with Jocelyn - thumb.jpg" alt="Blog">
-					</a>
-					<div class="blog-text">
-						<p>By <a href="#">Admin</a> / On December 15, 2020</p>
-						<h3>
-							<a href="blog-details.html">Stuffed Bell Peppers with Jocelyn</a>
-						</h3>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
-
+			
 			
 
 
