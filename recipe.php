@@ -1,7 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Manila');
-
-include('db/conn.php');
+include('render/_php_init.php');
 ?>
 <!doctype html>
 <html lang="zxx">

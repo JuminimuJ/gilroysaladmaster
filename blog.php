@@ -1,7 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Manila');
-
-include('db/conn.php');
+include('render/_php_init.php');
 ?>
 <!doctype html>
 <html lang="zxx">
@@ -62,7 +60,7 @@ Home
 			?>
 			<div class="col-lg-4 col-md-6">
 				<div class="single-blog single-blog-grid">
-					<a href="blog-details.html">
+					<a href="blog-details.php?blog_id=<?php echo $row[0];?>">
 						<img src="uploads/blog/thumb/<?php echo $row[3];?>" alt="Blog">
 					</a>
 					<div class="blog-text">

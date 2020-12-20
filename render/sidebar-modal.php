@@ -10,7 +10,7 @@
 					</button>
 					<h2 class="modal-title" id="myModalLabel2">
 						<a href="index.html">
-							<img src="uploads/logo.png" alt="Gilroy Saladmaster" style="max-width:60px;">
+							<img src="uploads/logo/<?php echo $logo_row[1];?>" alt="Gilroy Saladmaster" style="max-width:60px;">
 						</a>
 					</h2>
 				</div>

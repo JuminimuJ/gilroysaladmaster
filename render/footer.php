@@ -4,7 +4,7 @@
 <div class="col-lg-3 col-sm-6">
 <div class="single-widget">
 <a href="#">
-<img src="uploads/logo.png" alt="Gilroy Saladmaster" style="max-width:70px;">
+<img src="uploads/logo/<?php echo $logo_row[1];?>" alt="Gilroy Saladmaster" style="max-width:70px;">
 </a>
 <p>Subscribe to our newsletter to get the latest news.</p>
 <form class="subscribe newsletter-form" data-toggle="validator">

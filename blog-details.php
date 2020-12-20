@@ -1,8 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Manila');
-
-include('db/conn.php');
-
+include('render/_php_init.php');
 
 $blog_sql = "SELECT * FROM `page_blog` WHERE `id`='$_GET[blog_id]'";
 $blog_query = $conn->query($blog_sql);
@@ -80,25 +77,6 @@ Home
 <h3><?php echo $row[1];?></h3>
 <p><?php echo $row[2];?></p>
 
-<p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
-<ul class="wp-block-gallery columns-3">
-<li class="blocks-gallery-item">
-<figure>
-<img src="assets/img/blog-details/7.jpg" alt="image">
-</figure>
-</li>
-<li class="blocks-gallery-item">
-<figure>
-<img src="assets/img/blog-details/8.jpg" alt="image">
-</figure>
-</li>
-<li class="blocks-gallery-item">
-<figure>
-<img src="assets/img/blog-details/9.jpg" alt="image">
-</figure>
-</li>
-</ul>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 </div>
 <div class="article-footer">
 <div class="article-tags">

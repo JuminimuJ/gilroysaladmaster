@@ -3,6 +3,7 @@ session_start();
 include('../db/conn.php');
 if(isset($_SESSION["username"] ))
 {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +60,6 @@ if(isset($_SESSION["username"] ))
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Frontend Preview</h6>
                                     <div class="dropdown no-arrow">
-                                        <a class="btn btn-outline-dark rounded-0 btn-sm" href="../index.php" target="_blank"><i class="fa fa-globe"></i> View Website</a>
                                         <a class="dropdown-toggle btn btn-outline-dark rounded-0 btn-sm" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa fa-eye"></i> Change View Mode<i class="fas fa-caret-down fa-sm fa-fw"></i>

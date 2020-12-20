@@ -1,3 +1,6 @@
+<?php
+include('render/_php_init.php');
+?>
 <!doctype html>
 <html lang="zxx">
 <head>

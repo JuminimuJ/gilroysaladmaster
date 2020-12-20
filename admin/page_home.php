@@ -15,7 +15,7 @@ if(isset($_SESSION["username"] ))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CA Systems of Gilroy - Dashboard</title>
+    <title>CA Systems of Gilroy - Home</title>
 
     <?php include('render/css.php');?>
 
@@ -44,11 +44,6 @@ if(isset($_SESSION["username"] ))
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    </div>
-
                     <!-- Content Row -->
                     <div class="row">
 
@@ -58,7 +53,7 @@ if(isset($_SESSION["username"] ))
                             	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-home"></i> Home</h6>
 
-                                    <button class="btn btn-outline-dark"><i class="fas fa-plus"></i> Add New Slide</button>
+                                    <button data-toggle="modal" data-target="#addnewSlide" class="btn btn-outline-dark rounded-0"><i class="fas fa-plus"></i> Add New Slide</button>
                                 </div>
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -103,7 +98,57 @@ if(isset($_SESSION["username"] ))
 
             </div>
             <!-- End of Main Content -->
+<div class="modal fade" id="addnewSlide" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content rounded-0">
+      <form method="post" action="page_blog.php" enctype="multipart/form-data">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus"></i> Add new Blog</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="text" placeholder="Header title (h1)" name="slide_title" class="form-control">
+        </div>
 
+        <div class="form-group">
+            <label>Description:</label>
+            <textarea name="slide_desc" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Image Background:</label>
+            <input type="file" name="slide_thumb" accept="image/x-png,image/gif,image/jpeg" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Add Button Page Redirection</label>
+            <input type="checkbox" name="checkbtn" class="form-control"> Add Button
+            <select class="form-control" name="page_redirect">
+                <option default hidden value="">-- Select a landing page for this button --</option>
+                <option value="about.php">About</option>
+                <option value="blog.php">Blog</option>
+                <option value="contact.php">Contact</option>
+                <option value="product.php">Products</option>
+                <option value="recipe.php">Recipe</option>
+                <option value="services.php">Services</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" name="other_redirect" class="form-control" placeholder="Input specific link of a landing page. Eg: product.php?Bakeware" />
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary rounded-0" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+        <button type="submit" name="btnaddblog" class="btn btn-primary rounded-0"><i class="fas fa-save"></i> Post Blog</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>            
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">

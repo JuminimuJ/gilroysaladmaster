@@ -1,8 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Manila');
-
-include('db/conn.php');
-
+include('render/_php_init.php');
 
 $recipe_sql = "SELECT * FROM `page_recipe` WHERE `id`='$_GET[recipe_id]'";
 $recipe_query = $conn->query($recipe_sql);

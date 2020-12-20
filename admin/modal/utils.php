@@ -2,7 +2,7 @@
 <div class="modal fade" id="modalupdLogo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-md" role="document">
     <div class="modal-content rounded-0">
-      <form method="post" action="update_logo.php">
+      <form method="post" action="php/update_logo.php" enctype="multipart/form-data">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-image"></i> Update logo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -17,6 +17,7 @@
               $query_logo = $conn->query($sql_logo);
               $row_logo = $query_logo->fetch_array();
             ?>
+            <input type="hidden" name="logoid" value="<?php echo $row[0];?>">
             <img src="../uploads/logo/<?php echo $row_logo[1];?>" style="max-width:300px;">
         </div>
 

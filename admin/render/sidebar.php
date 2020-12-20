@@ -1,7 +1,11 @@
 <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(to right, #1c8eff , #3096fc);">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-                <img src="../assets/img/casg_revised2.png" style="max-width:80px;">
+                <?php 
+                $logo_sql = $conn->query("SELECT * FROM `acc_logo` WHERE 1");
+                $logo_row = $logo_sql->fetch_array();
+                ?>
+                <img src="../uploads/logo/<?php echo $logo_row[1];?>" style="max-width:80px;">
             </a>
 
             <!-- Divider -->
@@ -90,6 +94,12 @@
                 <a class="nav-link" href="page_contact.php">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span>Contact</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="page_testimontials.php">
+                    <i class="fas fa-fw fa-comments"></i>
+                    <span>Testimonials</span></a>
             </li>
 
 

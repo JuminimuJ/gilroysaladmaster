@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-md navbar-light">
 	<div class="container">
 		<a class="navbar-brand" href="index.html">
-			<img src="uploads/logo.png" alt="Gilroy Saladmaster" style="max-width:90px;">
+			<img src="uploads/logo/<?php echo $logo_row[1];?>" alt="Gilroy Saladmaster" style="max-width:90px;">
 		</a>
 
 		<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
