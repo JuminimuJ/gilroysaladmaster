@@ -138,8 +138,8 @@ if(isset($_SESSION["username"] ))
             </td>
         </tr>
         <script>
-       CKEDITOR.replace( 'editor0054<?php echo $row[0];?>' );
-    </script>
+           CKEDITOR.replace( 'editor0054<?php echo $row[0];?>' );
+        </script>
                                                 <?php
                                                     }//end while
                                                 ?>
@@ -186,7 +186,7 @@ if(isset($_SESSION["username"] ))
 
         <div class="form-group">
             <label>Image Thumbnail:</label>
-            <input type="file" name="blog_thumb" class="form-control">
+            <input type="file" name="blog_thumb" accept="image/x-png,image/gif,image/jpeg" class="form-control">
         </div>
 
         <div class="form-group">

@@ -3,6 +3,41 @@ session_start();
 include('../db/conn.php');
 if(isset($_SESSION["username"] ))
 {
+    if(isset($_POST['btnaddrecipe']))
+    {
+
+        $rec_title = $_POST['rec_title'];
+        $rec_desc = $_POST['rec_desc'];
+        $rec_link = $_POST['rec_link'];
+
+        $actualImg=PATHINFO($_FILES["rec_thumb"]["name"]);
+        $newActualImg=$actualImg['filename'] ."_". time() . "." . $actualImg['extension'];
+
+        if(move_uploaded_file($_FILES["rec_thumb"]["tmp_name"],"../uploads/recipe/thumb/" . $newActualImg))
+        {
+            $sql = "INSERT INTO `page_recipe`(`rec_title`, `rec_desc`, `link`, `img_thumb`, `status`) VALUES ('$rec_title', '$rec_desc', '$rec_link', '$newActualImg', '1')";
+            $query = $conn->query($sql) or die(mysqli_error($conn));
+
+            if($query)
+            {
+                echo "<script type='text/javascript'>
+                        alert('New Recipe has been Posted!');
+                        window.location='page_recipe.php';
+                      </script>";
+            }else{
+                echo "<script type='text/javascript'>
+                        alert('Unexpected Error!');
+                        window.location='page_recipe.php';
+                      </script>";
+            }
+        }else{
+            echo "<script type='text/javascript'>
+                    alert('Unexpected Error!');
+                    window.location='page_recipe.php';
+                  </script>";
+        }
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +53,7 @@ if(isset($_SESSION["username"] ))
     <title>CA Systems of Gilroy - Recipe</title>
 
     <?php include('render/css.php');?>
-
+    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 
 </head>
 
@@ -58,7 +93,7 @@ if(isset($_SESSION["username"] ))
                             	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-clipboard-list"></i> Recipe</h6>
 
-                                    <button class="btn btn-outline-dark"><i class="fas fa-plus"></i> Add New Tab</button>
+                                    <button data-toggle="modal" data-target="#addnewrecipe" class="btn btn-outline-dark rounded-0"><i class="fas fa-plus"></i> Add New Tab</button>
                                 </div>
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -66,55 +101,50 @@ if(isset($_SESSION["username"] ))
                                             <table style="width:100%;" class="table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Tab #</th>
-                                                        <th>Tab Title</th>
-                                                        <th>Tab Content</th>
-                                                        <th>Image/Video</th>
-                                                        <th>Link</th>
+                                                        <th>#</th>
+                                                        <th>Title</th>
+                                                        <th>Description</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Modi sit est</td>
-                                                        <td><textarea style="width:100%;height:400px;resize:none;">Architecto ut aperiam autem id
-Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka
 
-Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</textarea></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        
-                                                        <td><div class="dropdown">
-                                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Action
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-pen"></i> Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
-                                          </div>
-                                        </div></td>
-                                                    </tr>
+            <?php
+                $recipe_sql = "SELECT * FROM `page_recipe` WHERE 1";
+                $recipe_query = $conn->query($recipe_sql);
 
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Unde praesentium sed</td>
-                                                        <td><textarea style="width:100%;height:400px;resize:none;">Et blanditiis nemo veritatis excepturi
-Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka
+                while($row = $recipe_query->fetch_array())
+                {
+            ?>
+            <tr>
+                <td>
+                    <img style="max-width:200px;" src="../uploads/recipe/thumb/<?php echo $row[4];?>" />
+                </td>            
+                <td><?php echo $row[1];?></td>            
+                <td>
+        <textarea class="form-control" readonly="" id="editor0055<?php echo $row[0];?>"><?php echo $row[2];?></textarea>
+                </td>            
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-dark dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><i class="fas fa-pen"></i> Edit</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
 
-Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</textarea></td>
-<td></td>
-                                                        <td></td>
-                                                        <td><div class="dropdown">
-                                          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Action
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-pen"></i> Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
-                                          </div>
-                                        </div></td>
-                                                    </tr>
+            <script>
+               CKEDITOR.replace( 'editor0055<?php echo $row[0];?>' );
+            </script>
+            <?php
+                }//end while
+            ?>
+
+                                
                                                 </tbody>
                                             </table>
                                         </div>
@@ -134,7 +164,46 @@ Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reicie
 
             </div>
             <!-- End of Main Content -->
+<div class="modal fade" id="addnewrecipe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content rounded-0">
+      <form method="post" action="page_recipe.php" enctype="multipart/form-data">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus"></i> Add new Recipe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="text" name="rec_title" class="form-control">
+        </div>
 
+        <div class="form-group">
+            <label>Description:</label>
+            <textarea name="rec_desc" id="editor1"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Image Thumbnail:</label>
+            <input type="file" name="rec_thumb" accept="image/x-png,image/gif,image/jpeg" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Link / Embedded Code (Optional)</label><a href="#" data-toggle="tooltip" title="Right click on a Youtube video and click 'Copy Embed code' and paste the code below. "><i class="fa fa-question-circle"></i></a>
+            <textarea class="form-control" style="resize:none;" name="rec_link"></textarea>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary rounded-0" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+        <button type="submit" name="btnaddrecipe" class="btn btn-primary rounded-0"><i class="fas fa-save"></i> Post Recipe</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -159,7 +228,9 @@ Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reicie
     <?php include('modal/logout.php');?>
 
     <?php include('render/js.php');?>
-
+    <script>
+       CKEDITOR.replace( 'editor1' );
+    </script>
 </body>
 
 </html>

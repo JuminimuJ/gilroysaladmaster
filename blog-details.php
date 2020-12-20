@@ -523,35 +523,12 @@ Friday: <span>9.00 AM - 22.00 PM</span>
 </div>
 
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.2.1.slim.min.js"></script>
-
-<script src="assets/js/popper.min.js"></script>
-
-<script src="assets/js/bootstrap.min.js"></script>
-
-<script src="assets/js/jquery.meanmenu.js"></script>
-
-<script src="assets/js/jquery.nice-select.min.js"></script>
-
-<script src="assets/js/wow.min.js"></script>
-
-<script src="assets/js/owl.carousel.js"></script>
-
-<script src="assets/js/bootstrap-datepicker.min.js"></script>
-
-<script src="assets/js/imagelightbox.min.js"></script>
-
-<script src="assets/js/jquery.appear.js"></script>
-
-<script src="assets/js/odometer.min.js"></script>
-
-<script src="assets/js/jquery.ajaxchimp.min.js"></script>
-
-<script src="assets/js/form-validator.min.js"></script>
-
-<script src="assets/js/contact-form-script.js"></script>
-
-<script src="assets/js/custom.js"></script>
+<?php include('render/js.php');?>
+<script type="text/javascript">
+$(function() {
+  $('#blog').addClass('active');
+});
+</script>
 </body>
 
 <!-- Mirrored from templates.envytheme.com/asahi/default/blog-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 12:36:10 GMT -->

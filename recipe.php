@@ -1,3 +1,8 @@
+<?php
+date_default_timezone_set('Asia/Manila');
+
+include('db/conn.php');
+?>
 <!doctype html>
 <html lang="zxx">
 
@@ -47,65 +52,32 @@ Home
 	<div class="container">
 		<div class="row">
 
-			<div class="col-lg-3 col-sm-6 col-md-6">
-				<div class="single-speacial-Offers">
-					<div class="menu-img">
-						<img src="uploads/home_recipethumb3.jpg" alt="Offers">
-					</div>
-					<div class="item-text">
-						<h3>
-							<a href="#">Ilocano Pinakbet</a>
-						</h3>
-						<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
+			<?php 
 
-			<div class="col-lg-3 col-sm-6 col-md-6">
-				<div class="single-speacial-Offers">
-					<div class="menu-img">
-						<img src="uploads/home_recipethumb1.jpg" alt="Offers">
-					</div>
-					<div class="item-text">
-						<h3>
-							<a href="#">Sushi Bake</a>
-						</h3>
-						<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
+			$recipe_sql = "SELECT * FROM `page_recipe` WHERE 1";
+            $recipe_query = $conn->query($recipe_sql);
 
+                while($row = $recipe_query->fetch_array())
+                {
+			?>
 			<div class="col-lg-3 col-sm-6 col-md-6">
 				<div class="single-speacial-Offers">
 					<div class="menu-img">
-						<img src="uploads/home_recipethumb2.jpg" alt="Offers">
+						<img src="uploads/recipe/thumb/<?php echo $row[4];?>" alt="Recipe">
 					</div>
 					<div class="item-text">
 						<h3>
-							<a href="#">Japchae and Bibimbap</a>
+							<a href="recipe-details.php?recipe_id=<?php echo $row[0];?>"><?php echo $row[1];?></a>
 						</h3>
-						<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
+						<p><?php echo $row[2];?></p>
+						<a class="read-more" href="recipe-details.php?recipe_id=<?php echo $row[0];?>">Read More <i class="flaticon-right-arrow-forward"></i></a>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-lg-3 col-sm-6 col-md-6">
-				<div class="single-speacial-Offers">
-					<div class="menu-img">
-						<img src="uploads/home_recipethumb4.jpg" alt="Offers">
-					</div>
-					<div class="item-text">
-						<h3>
-							<a href="#">Pork Lechon Belly</a>
-						</h3>
-						<p>Lorem ipsum dolor siamonsectetur adipiscing elit, sed do </p>
-						<a class="read-more" href="blog-details.html">Read More <i class="flaticon-right-arrow-forward"></i></a>
-					</div>
-				</div>
-			</div>
+			<?php
+				}//end while
+			?>
+		
 
 
 		<!-- Pagination -->
